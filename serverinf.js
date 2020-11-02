@@ -1,0 +1,10 @@
+ const embed = new Discord.MessageEmbed() 
+    .setTitle(`${message.guild.name} Información del servidor`)
+    .setColor('GREEN')
+    .addField(`📘 Nombre de este servidor`, `${message.guild.name}`, true)
+    .addField(`📙 Id de este servidor`, `${message.guild.id}`, true)
+    .addField(`🌀 Cantidad de Boost que tiene el Servidor`, `${message.guild.premiumTier}/30`, true)
+    .addField(`🌎 Región que se encuentra el Servidor`, `${message.guild.region}`, true)
+    .addField(`🕋 Creacción del discord`, `${message.channel.guild.createdAt}`, true)
+    .addField(`👤 Nombre del Creador`, `${message.guild.owner.user.tag}`, true)
+message.channel.send(embed);
